@@ -4,7 +4,7 @@
 <h2>Wholesale Blanket (Kambal) and रजाई Supplier</h2>
 Shri Mahaluxmi Industries India
       <h2 style="text-align:center;">
-✅ 90000+ Happy Customers | ⭐ Trusted Local Brand
+✅ 9000+ Happy Customers | ⭐ Trusted Local Brand
 </h2>   Best Mattress & Furniture Store in  Una Himachal Pradesh
 <meta name="google-site-verification" content="sPzqBCn5CUqyofyGgOfGkUUyID2Er1xv0tS7CeIChj4" />
 <title>Shri Mahaluxmi Industries India</title>
@@ -178,7 +178,53 @@ Founder & CEO)
 ✅ विश्वसनीय सेवा – गुणवत्ता और ईमानदारी के साथ लंबे समय तक साथ निभाने का वादा।
 © 2026 Shri Mahaluxmi Industries India
 </footer> 
+<div id="chatbot" style="position:fixed;bottom:20px;right:20px;width:300px;font-family:Arial;">
+  <div id="chat-header" style="background:#28a745;color:white;padding:10px;cursor:pointer;">
+    Product Help
+  </div>
 
+  <div id="chat-body" style="display:none;border:1px solid #ccc;background:white;height:260px;overflow:auto;padding:10px;">
+    <div id="messages"></div>
+    <input id="userInput" type="text" placeholder="Ask about product..." style="width:75%;">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script>
+document.getElementById("chat-header").onclick=function(){
+ let body=document.getElementById("chat-body");
+ body.style.display = body.style.display==="none" ? "block":"none";
+}
+
+function sendMessage(){
+ let input=document.getElementById("userInput");
+ let msg=input.value.toLowerCase();
+ let messages=document.getElementById("messages");
+
+ messages.innerHTML += "<div><b>You:</b> "+msg+"</div>";
+
+ let reply="Please call us for details: 8219914439";
+
+ if(msg.includes("gadda") || msg.includes("mattress"))
+ reply="Premium mattress available. Price starts from ₹1500. Delivery available.";
+
+ if(msg.includes("bedsheet"))
+ reply="Elastic cotton bedsheet available. Offer price ₹299 only.";
+
+ if(msg.includes("kambal") || msg.includes("blanket"))
+ reply="Warm winter blankets available. Good quality at best price.";
+
+ if(msg.includes("sofa"))
+ reply="Sofa and sofa cum bed available. Contact for latest designs.";
+
+ if(msg.includes("address"))
+ reply="Shri Mahaluxmi Industries, VPO Ambehra Dhiraj, Distt Una, Himachal Pradesh.";
+
+ messages.innerHTML += "<div><b>Bot:</b> "+reply+"</div>";
+
+ input.value="";
+}
+</script>
 </body><!-- Sliding Customer Reviews -->
 <section style="background:#f5f5f5;padding:40px 20px;text-align:center;overflow:hidden;">
 
